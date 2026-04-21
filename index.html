@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michele Tufano | Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['ui-sans-serif', 'system-ui', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+        /* Elegant Custom Scrollbar for list containers */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+            border-radius: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1; /* tailwind slate-300 */
+            border-radius: 8px;
+        }
+        .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+            background-color: #94a3b8; /* tailwind slate-400 */
+        }
+        
+        /* Firefox fallback */
+        .custom-scrollbar {
+            scrollbar-width: thin;
+            scrollbar-color: #cbd5e1 transparent;
+        }
+
+        /* Smooth Expand Animation */
+        .expand-anim {
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Subtle links in publications venue */
+        p.italic a {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+        p.italic a:hover {
+            color: #2563eb !important; /* tailwind blue-600 */
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-blue-100 selection:text-blue-900">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 backdrop-blur-lg bg-white/70 border-b border-slate-200/60">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="font-bold text-xl tracking-tight text-slate-900">Michele Tufano</span>
+            <div class="hidden md:flex gap-8 font-medium text-sm text-slate-600">
+                <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
+                <a href="#experience" class="hover:text-blue-600 transition-colors">Experience</a>
+                <a href="#service" class="hover:text-blue-600 transition-colors">Service</a>
+                <a href="#publications" class="hover:text-blue-600 transition-colors">Publications</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-6 py-12 md:py-20 space-y-24 md:space-y-32">
+        
+        <!-- Hero Section -->
+        <section class="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-20">
+            <div class="flex-1 space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100/50 text-blue-700 text-sm font-semibold border border-blue-200/50">
+                    <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.31-1.03 2.41-2.16 3.16v2.62h3.49c2.04-1.89 3.31-4.67 3.31-7.79z" fill="#4285F4"/>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.49-2.62c-.98.66-2.23 1.06-3.79 1.06-2.91 0-5.38-1.97-6.26-4.62H2.1v2.71C3.92 20.5 7.68 23 12 23z" fill="#34A853"/>
+                        <path d="M5.74 14.16c-.22-.66-.35-1.36-.35-2.16s.13-1.5.35-2.16V7.13H2.1C1.38 8.56 1 10.22 1 12s.38 3.44 1.1 4.87l3.64-2.71z" fill="#FBBC05"/>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.68 1 3.92 3.5 2.1 7.13l3.64 2.71c.88-2.65 3.35-4.46 6.26-4.46z" fill="#EA4335"/>
+                    </svg>
+                    <span>DevAI Research Team @ Google</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
+                    Hi, I'm <span class="text-blue-600">Michele Tufano</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl">
+                    Sr. Software Engineer at Google @ DevAI Research Team.<br class="hidden sm:block">
+                    My research focuses on <strong class="text-slate-800 font-semibold">AI for Software Engineering</strong>, specifically exploring <strong class="text-slate-800 font-semibold">Agentic Software Engineering</strong>.
+                </p>
+                
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
+                    <a href="https://scholar.google.com/citations?user=DxZh-wcAAAAJ" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white rounded-lg font-medium hover:bg-slate-800 transition-all shadow-sm">
+                        <i data-lucide="book-open" class="w-4 h-4"></i>
+                        Google Scholar
+                    </a>
+                    <a href="https://www.linkedin.com/in/micheletufano/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-slate-700 border border-slate-200 rounded-lg font-medium hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm">
+                        <svg class="w-4 h-4 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+            
+            <div class="relative shrink-0">
+                <div class="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-20 transform translate-y-4"></div>
+                <img 
+                    src="img/Michele_Tufano_pic.png" 
+                    alt="Michele Tufano" 
+                    class="w-56 h-56 md:w-72 md:h-72 object-cover rounded-full border-4 border-white shadow-xl relative z-10"
+                    referrerpolicy="no-referrer"
+                />
+            </div>
+        </section>
+
+        <!-- News & About Section -->
+        <section id="about" class="scroll-mt-24">
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                
+                <!-- About Me -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3 text-2xl font-bold text-slate-900 mb-6">
+                        <i data-lucide="user" class="w-7 h-7 text-blue-600"></i>
+                        <h2>About Me</h2>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed text-lg">
+                        I am a Senior Software Engineer at Google, working within the DevAI research team. I obtained my Ph.D. in Computer Science at The College of William and Mary. Previously, I was a Sr. Research Scientist in Visual Studio at Microsoft.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed text-lg">
+                        My primary research interests lie at the intersection of Deep Learning and Software Engineering. I am currently focused on <strong>Agentic Program Repair</strong>, leveraging LLMs to automate developers' tasks, reproduce bugs, and generate reliable patches.
+                    </p>
+                    
+                    <ul class="space-y-4 pt-4 border-t border-slate-200">
+                        <li class="flex items-start gap-3 text-slate-600">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-slate-400 shrink-0 mt-0.5"></i>
+                            <span>Based in the Seattle Metropolitan Area.</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-600">
+                            <i data-lucide="mail" class="w-5 h-5 text-slate-400 shrink-0"></i>
+                            <a href="mailto:tufanomichele@google.com" class="hover:text-blue-600 transition-colors">tufanomichele@google.com</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="file-user" class="w-5 h-5 text-blue-500 shrink-0"></i>
+                            <a href="publications/CV.pdf" target="_blank" class="inline-flex items-center gap-1.5 font-medium text-blue-600 hover:text-blue-800 transition-colors">
+                                View Curriculum Vitae (CV) <i data-lucide="download" class="w-4 h-4"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- News (Expandable & Scrollable List) -->
+                <div class="bg-white p-1 rounded-2xl shadow-sm border border-slate-200/60 flex flex-col relative">
+                    <div class="px-6 py-5 border-b border-slate-100 flex items-center justify-between bg-white relative z-10 rounded-t-2xl shrink-0">
+                        <h3 class="font-bold text-slate-900 text-lg flex items-center gap-2">
+                            <i data-lucide="bell" class="w-5 h-5 text-blue-600"></i>
+                            Latest News
+                        </h3>
+                        <button id="news-expand-btn" onclick="toggleSection('news')" class="text-slate-400 hover:text-blue-600 transition-colors p-1.5 rounded-lg hover:bg-slate-50" title="Expand / Collapse">
+                            <span id="news-icon-expand"><i data-lucide="maximize-2" class="w-4 h-4"></i></span>
+                            <span id="news-icon-shrink" class="hidden"><i data-lucide="minimize-2" class="w-4 h-4"></i></span>
+                        </button>
+                    </div>
+                    
+                    <div id="news-scroll-wrapper" class="overflow-y-auto custom-scrollbar p-6 expand-anim" style="max-height: 380px;">
+                        <div id="news-container" class="space-y-5">
+                            <!-- Dynamically populated via JS -->
+                        </div>
+                    </div>
+                    
+                    <div id="news-fade" class="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white to-transparent pointer-events-none rounded-b-2xl transition-opacity duration-300"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="scroll-mt-24">
+            <div class="flex items-center gap-3 text-2xl font-bold text-slate-900 mb-10">
+                <i data-lucide="briefcase" class="w-7 h-7 text-blue-600"></i>
+                <h2>Experience & Education</h2>
+            </div>
+            
+            <div id="experience-container" class="space-y-8 relative before:absolute before:inset-0 before:ml-7 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-200 before:to-transparent">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </section>
+
+        <!-- Service & Talks Section -->
+        <section id="service" class="scroll-mt-24 space-y-12">
+            <div class="flex items-center gap-3 text-2xl font-bold text-slate-900 mb-10">
+                <i data-lucide="award" class="w-7 h-7 text-blue-600"></i>
+                <h2>Service & Talks</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                
+                <!-- Professional Service (Expandable) -->
+                <div class="space-y-6 relative">
+                    <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                        <h3 class="flex items-center gap-2 text-xl font-bold text-slate-800">
+                            <i data-lucide="users" class="w-5 h-5 text-slate-500"></i>
+                            Professional Service
+                        </h3>
+                        <button id="service-expand-btn" onclick="toggleSection('service')" class="text-slate-400 hover:text-blue-600 transition-colors p-1.5 rounded-lg hover:bg-slate-100" title="Expand / Collapse">
+                            <span id="service-icon-expand"><i data-lucide="maximize-2" class="w-4 h-4"></i></span>
+                            <span id="service-icon-shrink" class="hidden"><i data-lucide="minimize-2" class="w-4 h-4"></i></span>
+                        </button>
+                    </div>
+                    
+                    <div class="relative">
+                        <div id="service-scroll-wrapper" class="overflow-y-auto custom-scrollbar pr-3 expand-anim" style="max-height: 380px;">
+                            <div id="service-container" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 space-y-4">
+                                 <!-- Dynamically populated via JS -->
+                            </div>
+                        </div>
+                        <div id="service-fade" class="absolute bottom-0 left-0 right-3 h-10 bg-gradient-to-t from-slate-50 to-transparent pointer-events-none transition-opacity duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- Invited Talks (Expandable) -->
+                <div class="space-y-6 relative">
+                    <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                        <h3 class="flex items-center gap-2 text-xl font-bold text-slate-800">
+                            <i data-lucide="mic" class="w-5 h-5 text-slate-500"></i>
+                            Invited Talks
+                        </h3>
+                        <button id="talks-expand-btn" onclick="toggleSection('talks')" class="text-slate-400 hover:text-blue-600 transition-colors p-1.5 rounded-lg hover:bg-slate-100" title="Expand / Collapse">
+                            <span id="talks-icon-expand"><i data-lucide="maximize-2" class="w-4 h-4"></i></span>
+                            <span id="talks-icon-shrink" class="hidden"><i data-lucide="minimize-2" class="w-4 h-4"></i></span>
+                        </button>
+                    </div>
+                    
+                    <div class="relative">
+                        <div id="talks-scroll-wrapper" class="overflow-y-auto custom-scrollbar pr-3 expand-anim" style="max-height: 380px;">
+                            <div id="talks-container" class="space-y-4">
+                                 <!-- Dynamically populated via JS -->
+                            </div>
+                        </div>
+                        <div id="talks-fade" class="absolute bottom-0 left-0 right-3 h-10 bg-gradient-to-t from-slate-50 to-transparent pointer-events-none transition-opacity duration-300"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="scroll-mt-24 space-y-12">
+            <div>
+                <div class="flex items-center gap-3 text-2xl font-bold text-slate-900 mb-2">
+                    <i data-lucide="file-text" class="w-7 h-7 text-blue-600"></i>
+                    <h2>Publications & Pre-prints</h2>
+                </div>
+                <p class="text-slate-500 mb-8">Focusing on LLMs, Agentic Program Repair, and AI for Software Engineering.</p>
+
+                <div id="publications-container" class="space-y-12">
+                     <!-- Dynamically populated via JS -->
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="https://scholar.google.com/citations?user=DxZh-wcAAAAJ" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                        View full list on Google Scholar <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-white py-10 mt-12">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
+            <p id="copyright-year">© 2026 Michele Tufano. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="https://scholar.google.com/citations?user=DxZh-wcAAAAJ" class="hover:text-blue-600">Scholar</a>
+                <a href="https://www.linkedin.com/in/micheletufano/" class="hover:text-blue-600">LinkedIn</a>
+                <a href="mailto:tufanomichele@google.com" class="hover:text-blue-600">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Application Data & Logic -->
+    <script>
+        document.getElementById('copyright-year').innerText = `© ${new Date().getFullYear()} Michele Tufano. All rights reserved.`;
+
+        // ----------------------------------------------------
+        // TOGGLE EXPAND/COLLAPSE FUNCTION
+        // ----------------------------------------------------
+        function toggleSection(sectionId) {
+            const wrapper = document.getElementById(sectionId + '-scroll-wrapper');
+            const fade = document.getElementById(sectionId + '-fade');
+            const iconExpand = document.getElementById(sectionId + '-icon-expand');
+            const iconShrink = document.getElementById(sectionId + '-icon-shrink');
+            
+            const isExpanded = wrapper.getAttribute('data-expanded') === 'true';
+            
+            if (isExpanded) {
+                // Collapse action
+                wrapper.style.maxHeight = wrapper.getAttribute('data-collapsed-height') || '380px';
+                if (fade) fade.style.opacity = '1';
+                iconExpand.classList.remove('hidden');
+                iconShrink.classList.add('hidden');
+                wrapper.setAttribute('data-expanded', 'false');
+                
+                // Reset scroll position smoothly
+                setTimeout(() => { wrapper.scrollTop = 0; }, 300);
+            } else {
+                // Expand action
+                if (!wrapper.hasAttribute('data-collapsed-height')) {
+                    wrapper.setAttribute('data-collapsed-height', wrapper.style.maxHeight || '380px');
+                }
+                wrapper.style.maxHeight = '3000px'; // Expand to fit all content smoothly
+                if (fade) fade.style.opacity = '0';
+                iconExpand.classList.add('hidden');
+                iconShrink.classList.remove('hidden');
+                wrapper.setAttribute('data-expanded', 'true');
+            }
+        }
+
+        // ----------------------------------------------------
+        // DATA ARRAYS
+        // ----------------------------------------------------
+
+        const newsItems = [
+            { date: "Jun 2026", content: "I will be speaking at <a href='https://sesalabunisa.github.io/ISSSE-2026/#program' class='text-blue-600 hover:underline' target='_blank'>ISSSE 2026</a> (The 18th International Summer School on Software Engineering) in Salerno, Italy on 'Scaling Agentic Program Repair at Google'." },
+            { date: "Sep 2023", content: "Spoke at the <a href='https://www.ucl.ac.uk/crest/events/2023/sep/65th-crest-open-workshop-automated-program-repair-and-genetic-improvement#:~:text=Our%20work%20on%20automatic%20software,an%20academic%2C%20and%20an%20educator.' class='text-blue-600 hover:underline' target='_blank'>65th CREST Open Workshop</a> at UCL on Automated Program Repair and Genetic Improvement, presenting 'InferFix: End-to-End Program Repair with LLMs'." },
+            { date: "Sep 2023", content: "Delivered a session titled 'AI for SE' at the <a href='https://siesta.si.usi.ch/2023/schedule#:~:text=In%20this%20talk%2C%20we%20will,(RLHF)%20for%20SE%20tasks.' class='text-blue-600 hover:underline' target='_blank'>SIESTA 2023</a> Summer School in Lugano, Switzerland." }
+        ];
+
+        const publications = [
+            // New papers from mock
+            {
+              "id": "2503.16771",
+              "title": "Enabling Global, Human-Centered Explanations for LLMs: From Tokens to Interpretable Code and Test Generation",
+              "authors": "Dipin Khati, Daniel Rodriguez-Cardenas, David N. Palacio, Alejandro Velasco, M. Tufano, Denys Poshyvanyk",
+              "venue": "International Conference on Software Engineering (ICSE 2026) - Research Track",
+              "year": "2026",
+              "links": [
+                {type: "paper", url: "https://arxiv.org/pdf/2503.16771v2.pdf"},
+                {type: "details", url: "https://conf.researchr.org/details/icse-2026/icse-2026-research-track/236/Enabling-Global-Human-Centered-Explanations-for-LLMs-From-Tokens-to-Interpretable-C"}
+              ]
+            },
+            {
+              "id": "2601.19066",
+              "title": "Dynamic Cogeneration of Bug Reproduction Test in Agentic Program Repair",
+              "authors": "Runxiang Cheng, Michele Tufano, José Cambronero, Renyao Wei, Sherry Shi, Grant Uy, Pat Rondon, Franjo Ivancic",
+              "venue": "ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE 2026) - Industry Papers",
+              "year": "2026",
+              "links": [
+                {type: "paper", url: "https://arxiv.org/pdf/2601.19066.pdf"},
+                {type: "details", url: "https://conf.researchr.org/details/fse-2026/fse-2026-industry-papers/35/Dynamic-Cogeneration-of-Bug-Reproduction-Test-in-Agentic-Program-Repair"}
+              ]
+            },
+            {
+              "id": "2511.10865",
+              "title": "Towards a Human-in-the-Loop Framework for Reliable Patch Evaluation Using an LLM-as-a-Judge",
+              "authors": "Sherry Shi, Renyao Wei, Michele Tufano, José Cambronero, Runxiang Cheng, Franjo Ivancic, Pat Rondon",
+              "venue": "International Workshop on AI and Software Quality Engineering (AI-SQE @ ICSE 2026)",
+              "year": "2026",
+              "links": [
+                {type: "paper", url: "https://arxiv.org/pdf/2511.10865.pdf"},
+                {type: "details", url: "https://conf.researchr.org/details/icse-2026/ai-sqe-2026-papers/7/Towards-a-Human-in-the-Loop-Framework-for-Reliable-Patch-Evaluation-Using-an-LLM-as-a"}
+              ]
+            },
+            {
+              "id": "2510.03217",
+              "title": "Abstain and Validate: A Dual-LLM Policy for Reducing Noise in Agentic Program Repair",
+              "authors": "José Cambronero, Michele Tufano, Sherry Shi, Renyao Wei, Grant Uy, Runxiang Cheng, Chin-Jung Liu, Shiying Pan, Satish Chandra, Pat Rondon",
+              "venue": "International Conference on Software Engineering (ICSE 2026) - Software Engineering in Practice (SEIP)",
+              "year": "2026",
+              "links": [
+                {type: "paper", url: "https://arxiv.org/pdf/2510.03217.pdf"},
+                {type: "details", url: "https://conf.researchr.org/details/icse-2026/icse-2026-software-engineering-in-practice/9/Abstain-and-Validate-A-Dual-LLM-Policy-for-Reducing-Noise-in-Agentic-Program-Repair"}
+              ]
+            },
+            {
+              "id": "2509.26546",
+              "title": "Towards Verified Code Reasoning by LLMs",
+              "authors": "Meghana Sistla, Gogul Balakrishnan, Pat Rondon, José Cambronero, Michele Tufano, Satish Chandra",
+              "venue": "CoRR abs/2509.26546",
+              "year": "2025",
+              "links": [{type: "paper", url: "https://arxiv.org/pdf/2509.26546.pdf"}]
+            },
+            {
+              "id": "2502.01821",
+              "title": "Agentic Bug Reproduction for Effective Automated Program Repair at Google",
+              "authors": "Runxiang Cheng, Michele Tufano, Jürgen Cito, José Cambronero, Pat Rondon, Renyao Wei, Aaron Sun, Satish Chandra",
+              "venue": "CoRR abs/2502.01821",
+              "year": "2025",
+              "links": [{type: "paper", url: "https://arxiv.org/pdf/2502.01821.pdf"}]
+            },
+            {
+              "id": "2501.07531",
+              "title": "Evaluating Agent-based Program Repair at Google",
+              "authors": "Pat Rondon, Renyao Wei, José Cambronero, Jürgen Cito, Aaron Sun, Siddhant Sanyam, Michele Tufano, Satish Chandra",
+              "venue": "Software Engineering in Practice (SEIP) track at the International Conference on Software Engineering (ICSE 2025)",
+              "year": "2025",
+              "links": [{type: "paper", url: "https://arxiv.org/pdf/2501.07531.pdf"}]
+            },
+            {
+              "id": "2310.02368",
+              "title": "Reinforcement Learning from Automatic Feedback for High-Quality Unit Test Generation",
+              "authors": "Benjamin Steenhoek, Michele Tufano, Neel Sundaresan, Alexey Svyatkovskiy",
+              "venue": "International Workshop on Deep Learning for Testing (DeepTest 2025)",
+              "year": "2025",
+              "links": [{type: "paper", url: "https://arxiv.org/pdf/2310.02368.pdf"}]
+            },
+            {
+              "id": "2403.08299",
+              "title": "AutoDev: Automated AI-Driven Development",
+              "authors": "Michele Tufano, Anisha Agarwal, Jinu Jang, Roshanak Zilouchian Moghaddam, Neel Sundaresan",
+              "venue": "CoRR abs/2403.08299",
+              "year": "2024",
+              "links": [{type: "paper", url: "https://arxiv.org/pdf/2403.08299.pdf"}]
+            },
+            
+            // Added missing papers
+            {
+              "id": "2402.14261",
+              "title": "Copilot Evaluation Harness: Evaluating LLM-Guided Software Programming",
+              "authors": "Anisha Agarwal, Aaron Chan, Shubham Chandel, Jinu Jang, Shaun Miller, Roshanak Zilouchian Moghaddam, Yevhen Mohylevskyy, Neel Sundaresan, Michele Tufano",
+              "venue": "CoRR abs/2402.14261",
+              "year": "2024",
+              "links": [{type: "paper", url: "https://arxiv.org/pdf/2402.14261.pdf"}]
+            },
+            {
+              "id": "2307.13383",
+              "title": "Predicting Code Coverage without Execution",
+              "authors": "Michele Tufano, Shubham Chandel, Anisha Agarwal, Neel Sundaresan, Colin B. Clement",
+              "venue": "CoRR abs/2307.13383",
+              "year": "2023",
+              "links": [{type: "paper", url: "https://arxiv.org/pdf/2307.13383.pdf"}]
+            },
+            {
+              "id": "2208.13928",
+              "title": "Exploring and Evaluating Personalized Models for Code Generation",
+              "authors": "Andrei Zlotchevski, Dawn Drain, Alexey Svyatkovskiy, Colin B. Clement, Neel Sundaresan, Michele Tufano",
+              "venue": "ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE 2022)",
+              "year": "2022",
+              "links": [{type: "paper", url: "https://arxiv.org/pdf/2208.13928.pdf"}]
+            },
+            {
+              "id": "2203.12776",
+              "title": "Methods2Test: A dataset of focal methods mapped to test cases",
+              "authors": "Michele Tufano, Shao Kun Deng, Neel Sundaresan, Alexey Svyatkovskiy",
+              "venue": "International Conference on Mining Software Repositories (MSR 2022)",
+              "year": "2022",
+              "links": [{type: "paper", url: "https://arxiv.org/pdf/2203.12776.pdf"}]
+            },
+            {
+              "id": "2303.07263",
+              "title": "InferFix: End-to-End Program Repair with LLMs",
+              "authors": "Matthew Jin, Syed Shahriar, Michele Tufano, Xin Shi, Shuai Lu, Neel Sundaresan, Alexey Svyatkovskiy",
+              "venue": "ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE 2023)",
+              "year": "2023",
+              "links": [{type: "paper", url: "https://arxiv.org/pdf/2303.07263.pdf"}]
+            },
+            {
+              "id": "2301.01224",
+              "title": "An Empirical Investigation into the Use of Image Captioning for Automated Software Documentation",
+              "authors": "Kevin Moran, Ali Yachnes, George Purnell, Junayed Mahmud, Michele Tufano, Carlos Bernal-Cárdenas, Denys Poshyvanyk, Zach H'Doubler",
+              "venue": "IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER 2022)",
+              "year": "2022",
+              "links": [{type: "paper", url: "https://arxiv.org/pdf/2301.01224.pdf"}]
+            },
+            {
+              "title": "Enabling Mutant Generation for Open- and Closed-Source Android Apps",
+              "authors": "Camilo Escobar-Velásquez, Mario Linares-Vásquez, Gabriele Bavota, Michele Tufano, Kevin Moran, Massimiliano Di Penta, Christopher Vendome, Carlos Bernal-Cárdenas, Denys Poshyvanyk",
+              "venue": "IEEE Transactions on Software Engineering (TSE), 48(2):186-208, 2022",
+              "year": "2022",
+              "links": []
+            },
+            {
+              "id": "2109.08780",
+              "title": "Long-Range Modeling of Source Code Files with eWASH: Extended Window Access by Syntax Hierarchy",
+              "authors": "Colin B. Clement, Shuai Lu, Xiaoyu Liu, Michele Tufano, Dawn Drain, Nan Duan, Neel Sundaresan, Alexey Svyatkovskiy",
+              "venue": "Conference on Empirical Methods in Natural Language Processing (EMNLP 2021)",
+              "year": "2021",
+              "links": [{type: "paper", url: "https://arxiv.org/pdf/2109.08780.pdf"}]
+            },
+            {
+              "id": "2009.08366",
+              "title": "GraphCodeBERT: Pre-training Code Representations with Data Flow",
+              "authors": "Daya Guo, Shuo Ren, Shuai Lu, Zhangyin Feng, Duyu Tang, Shujie Liu, Long Zhou, Nan Duan, Alexey Svyatkovskiy, Shengyu Fu, Michele Tufano, Shao Kun Deng, Colin B. Clement, Dawn Drain, Neel Sundaresan, Jian Yin, Daxin Jiang, Ming Zhou",
+              "venue": "International Conference on Learning Representations (ICLR 2021)",
+              "year": "2021",
+              "links": [{type: "paper", url: "https://arxiv.org/pdf/2009.08366.pdf"}]
+            },
+            {
+              "id": "2101.02518",
+              "title": "Towards Automating Code Review Activities",
+              "authors": "Rosalia Tufano, Luca Pascarella, Michele Tufano, Denys Poshyvanyk, Gabriele Bavota",
+              "venue": "International Conference on Software Engineering (ICSE 2021)",
+              "year": "2021",
+              "links": [{type: "paper", url: "https://arxiv.org/pdf/2101.02518.pdf"}]
+            },
+            {
+              "id": "2102.04664",
+              "title": "CodeXGLUE: A Machine Learning Benchmark Dataset for Code Understanding and Generation",
+              "authors": "Shuai Lu, Daya Guo, Shuo Ren, Junjie Huang, Alexey Svyatkovskiy, Ambrosio Blanco, Colin B. Clement, Dawn Drain, Daxin Jiang, Duyu Tang, Ge Li, Lidong Zhou, Linjun Shou, Long Zhou, Michele Tufano, Ming Gong, Ming Zhou, Nan Duan, Neel Sundaresan, Shao Kun Deng, Shengyu Fu, Shujie Liu",
+              "venue": "Conference on Neural Information Processing Systems (NeurIPS 2021) Datasets and Benchmarks Track",
+              "year": "2021",
+              "links": [{type: "paper", url: "https://arxiv.org/pdf/2102.04664.pdf"}]
+            },
+
+            // Extracted papers from old website
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "publications/Michele_Tufano_Thesis.pdf"
+                }
+              ],
+              "link": "publications/Michele_Tufano_Thesis.pdf",
+              "title": "Learning Code Transformations via Neural Machine Translation",
+              "authors": "Michele Tufano",
+              "venue": "A Dissertation presented to the Graduate Faculty of The College of William & Mary in Candidacy for the Degree of Doctor of Philosophy",
+              "year": "2019"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "https://arxiv.org/pdf/2009.05617.pdf"
+                }
+              ],
+              "link": "https://arxiv.org/pdf/2009.05617.pdf",
+              "title": "Unit Test Case Generation with Transformers",
+              "authors": "M. Tufano, D. Drain, A. Svyatkovskiy, S. K. Deng, N. Sundaresan",
+              "year": "2020",
+              "id": "2009.05617"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "https://arxiv.org/pdf/2009.05634.pdf"
+                }
+              ],
+              "link": "https://arxiv.org/pdf/2009.05634.pdf",
+              "title": "Generating Accurate Assert Statements for Unit Test Cases using Pretrained Transformers",
+              "authors": "Michele Tufano, Dawn Drain, Alexey Svyatkovskiy, Neel Sundaresan",
+              "venue": "International Conference on Automation of Software Test (AST 2022)",
+              "year": "2022",
+              "id": "2009.05634"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "https://arxiv.org/pdf/1901.01808.pdf"
+                },
+                {
+                  "type": "project",
+                  "url": "https://github.com/KTH/sequencer"
+                }
+              ],
+              "link": "https://arxiv.org/pdf/1901.01808.pdf",
+              "title": "SEQUENCER: Sequence-to-Sequence Learning for End-to-End Program Repair",
+              "authors": "Z. Chen, S. Kommrusch, M. Tufano, L.-N. Pouchet, D. Poshyvanyk, M. Monperrus",
+              "venue": "IEEE Transactions on Software Engineering (<a href=\"https://www.computer.org/web/tse\" target=\"_blank\">TSE 2019</a>)",
+              "year": "2019",
+              "id": "1901.01808"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "https://arxiv.org/pdf/1812.08693.pdf"
+                },
+                {
+                  "type": "presentation",
+                  "url": "presentations/P1.pdf"
+                },
+                {
+                  "type": "project",
+                  "url": "https://sites.google.com/view/learning-fixes"
+                }
+              ],
+              "link": "https://arxiv.org/pdf/1812.08693.pdf",
+              "title": "An Empirical Investigation into Learning Bug-Fixing Patches in the Wild via Neural Machine Translation",
+              "authors": "M. Tufano, C. Watson, G. Bavota, M. Di Penta, M. White, D. Poshyvanyk",
+              "venue": "ACM Transactions on Software Engineering and Methodology (<a href=\"https://tosem.acm.org/\" target=\"_blank\">TOSEM 2019</a>)",
+              "year": "2018",
+              "id": "1812.08693"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "http://www.sciencedirect.com/science/article/pii/S016412121730081X"
+                },
+                {
+                  "type": "project",
+                  "url": "http://www.cs.wm.edu/semeru/data/JSS-Android-opt/"
+                }
+              ],
+              "link": "http://www.sciencedirect.com/science/article/pii/S016412121730081X",
+              "title": "How Developers Micro-Optimize Android Apps",
+              "authors": "M. Linares-Vásquez, C. Vendome, M. Tufano, and D. Poshyvanyk",
+              "venue": "Journal of Systems and Software (<a href=\"https://www.journals.elsevier.com/journal-of-systems-and-software/\" target=\"_blank\">JSS 2017</a>)",
+              "year": "2017"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "publications/J3.pdf"
+                },
+                {
+                  "type": "project",
+                  "url": "http://www.cs.wm.edu/semeru/data/code-smells/"
+                }
+              ],
+              "link": "publications/J3.pdf",
+              "title": "When and Why Your Code Starts to Smell Bad (and Whether the Smells Go Away)",
+              "authors": "M. Tufano, F. Palomba, G. Bavota, R. Oliveto, M. Di Penta, A. De Lucia, and D. Poshyvanyk",
+              "venue": "IEEE Transactions on Software Engineering (<a href=\"https://www.computer.org/web/tse\" target=\"_blank\">TSE 2017</a>)",
+              "year": "2017"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "publications/J2.pdf"
+                },
+                {
+                  "type": "project",
+                  "url": "http://www.cs.wm.edu/semeru/data/breaking-changes/"
+                }
+              ],
+              "link": "publications/J2.pdf",
+              "title": "There and Back Again: Can you Compile that Snapshot?",
+              "authors": "M. Tufano, F. Palomba, G. Bavota, M. Di Penta, R. Oliveto, A. De Lucia, and D. Poshyvanyk",
+              "venue": "Journal of Software: Evolution and Process (<a href=\"http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)2047-7481\" target=\"_blank\">JSEP 2016</a>)",
+              "year": "2016"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "publications/J1.pdf"
+                },
+                {
+                  "type": "project",
+                  "url": "http://www.cs.wm.edu/semeru/data/JSEP15-Fix-Inducing-Commits/"
+                }
+              ],
+              "link": "publications/J1.pdf",
+              "title": "An Empirical Study on Developer Related Factors Characterizing Fix-Inducing Commits",
+              "authors": "M. Tufano, G. Bavota, D. Poshyvanyk, M. Di Penta, R. Oliveto, and A. De Lucia",
+              "venue": "Journal of Software: Evolution and Process (<a href=\"http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)2047-7481\" target=\"_blank\">JSEP 2016</a>)",
+              "year": "2016"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "https://arxiv.org/pdf/2002.05800.pdf"
+                },
+                {
+                  "type": "project",
+                  "url": "https://sites.google.com/view/atlas-nmt/home"
+                }
+              ],
+              "link": "https://arxiv.org/pdf/2002.05800.pdf",
+              "title": "On Learning Meaningful Assert Statements for Unit Test Cases",
+              "authors": "C. Watson, M. Tufano, K. Moran, G. Bavota, D. Poshyvanyk",
+              "venue": "Proceedings 42nd ACM/IEEE International Conference on Software Engineering (<a href=\"https://conf.researchr.org/track/icse-2020/Demonstrations?track=ICSE%20Demonstrations#event-overview\" target=\"_blank\">ICSE 2020</a>) - Seoul, South Korea, May 23-29, 2020, 4 pages. Acceptance Rate: 20.9%",
+              "year": "2020",
+              "id": "2002.05800"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "https://arxiv.org/pdf/2002.04760.pdf"
+                },
+                {
+                  "type": "project",
+                  "url": "https://sites.google.com/view/learning-mutation"
+                },
+                {
+                  "type": "code",
+                  "url": "https://github.com/micheletufano/DeepMutation"
+                }
+              ],
+              "link": "https://arxiv.org/pdf/2002.04760.pdf",
+              "title": "DeepMutation: A Neural Mutation Tool",
+              "authors": "M. Tufano, J. Kimko, S. Wang, C. Watson, G. Bavota, M. Di Penta, D. Poshyvanyk",
+              "venue": "Proceedings 42nd ACM/IEEE International Conference on Software Engineering (<a href=\"https://conf.researchr.org/track/icse-2020/Demonstrations?track=ICSE%20Demonstrations#event-overview\" target=\"_blank\">ICSE 2020</a>), Demonstrations Track - Seoul, South Korea, May 23-29, 2020, 4 pages. Acceptance Rate: 33.3%",
+              "year": "2020",
+              "id": "2002.04760"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "https://arxiv.org/pdf/1812.10772.pdf"
+                },
+                {
+                  "type": "project",
+                  "url": "https://sites.google.com/view/learning-mutation"
+                }
+              ],
+              "link": "https://arxiv.org/pdf/1812.10772.pdf",
+              "title": "Learning How to Mutate Source Code from Bug-Fixes",
+              "authors": "M. Tufano, C. Watson, G. Bavota, M. Di Penta, M. White, D. Poshyvanyk",
+              "venue": "Proceedings 35th IEEE International Conference on Software Maintenance and Evolution (<a href=\"https://icsme2019.github.io/index.html\" target=\"_blank\">ICSME 2019</a>) - Cleveland, OH, USA, October 2-4, 2019, to appear 12 pages. Acceptance Rate: 23%",
+              "year": "2018",
+              "id": "1812.10772"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "https://arxiv.org/pdf/1901.09102.pdf"
+                },
+                {
+                  "type": "project",
+                  "url": "https://sites.google.com/view/learning-codechanges"
+                },
+                {
+                  "type": "presentation",
+                  "url": "presentations/Pres-Learning-CodeChanges.pdf"
+                }
+              ],
+              "link": "https://arxiv.org/pdf/1901.09102.pdf",
+              "title": "On Learning Meaningful Code Changes via Neural Machine Translation",
+              "authors": "M. Tufano, J. Pantiuchina, C. Watson, G. Bavota, and D. Poshyvanyk",
+              "venue": "Proceedings 41st ACM/IEEE International Conference on Software Engineering (<a href=\"https://conf.researchr.org/home/icse-2019\" target=\"_blank\">ICSE 2019</a>) - Montréal, QC, Canada, May 25-31, 2019, to appear 12 pages. Acceptance Rate: 21%",
+              "year": "2019",
+              "id": "1901.09102"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "https://arxiv.org/pdf/1901.07142.pdf"
+                },
+                {
+                  "type": "presentation",
+                  "url": "presentations/Pres-Predict-BuildImpact.pdf"
+                }
+              ],
+              "link": "https://arxiv.org/pdf/1901.07142.pdf",
+              "title": "Towards Predicting the Impact of Software Changes on Building Activities",
+              "authors": "M. Tufano, H. Sajnani, and K. Herzig",
+              "venue": "Proceedings 41st ACM/IEEE International Conference on Software Engineering (<a href=\"https://conf.researchr.org/home/icse-2019\" target=\"_blank\">ICSE 2019</a>), New Ideas and Emerging Results - Montréal, QC, Canada, May 25-31, 2019, to appear 4 pages. Acceptance Rate: 31%",
+              "year": "2019",
+              "id": "1901.07142"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "https://arxiv.org/pdf/1901.00891.pdf"
+                },
+                {
+                  "type": "video",
+                  "url": "https://www.youtube.com/watch?v=hqUuuMMj2BU&feature=youtu.be"
+                },
+                {
+                  "type": "project",
+                  "url": "http://www.guigle.com/"
+                }
+              ],
+              "link": "https://arxiv.org/pdf/1901.00891.pdf",
+              "title": "Guigle: A GUI Search Engine for Android Apps",
+              "authors": "C. Bernal-Cárdenas, K. Moran, M. Tufano, Z. Liu, L. Nan, Z. Shi, and D. Poshyvanyk",
+              "venue": "Proceedings 41st ACM/IEEE International Conference on Software Engineering (<a href=\"https://conf.researchr.org/home/icse-2019\" target=\"_blank\">ICSE 2019</a>), Formal Research Tool Demonstration - Montréal, QC, Canada, May 25-31, 2019, to appear 4 pages. Acceptance Rate: 47%",
+              "year": "2019",
+              "id": "1901.00891"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "https://arxiv.org/pdf/1707.04742.pdf"
+                },
+                {
+                  "type": "project",
+                  "url": "https://sites.google.com/view/deeprepair"
+                }
+              ],
+              "link": "https://arxiv.org/pdf/1707.04742.pdf",
+              "title": "Sorting and Transforming Program Repair Ingredients via Deep Learning Code Similarities",
+              "authors": "M. White, M. Tufano, M. Martinez, M. Monperrus, and D. Poshyvanyk",
+              "venue": "Proceedings 26th IEEE International Conference on Software Analysis, Evolution and Reengineering (<a href=\"https://saner2019.github.io/\" target=\"_blank\">SANER 2019</a>) - Hangzhou, China, February 24-27, 2019, to appear12 pages. Acceptance Rate: 27%",
+              "year": "2017",
+              "id": "1707.04742"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "publications/C10.pdf"
+                },
+                {
+                  "type": "presentation",
+                  "url": "presentations/P1.pdf"
+                },
+                {
+                  "type": "project",
+                  "url": "https://sites.google.com/view/learning-fixes"
+                }
+              ],
+              "link": "publications/C10.pdf",
+              "title": "An Empirical Investigation into Learning Bug-Fixing Patches in the Wild via Neural Machine Translation",
+              "authors": "M. Tufano, C. Watson, G. Bavota, M. Di Penta, M. White, D. Poshyvanyk",
+              "venue": "Proceedings of the 33rd IEEE/ACM International Conference on Automated Software Engineering (<a href=\"http://www.ase2018.com/\" target=\"_blank\">ASE 2018</a>) - Montpellier, France, Sept. 3-7, 2018, New Ideas Paper. Acceptance Rate: 21%",
+              "year": "2018"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "publications/C9.pdf"
+                },
+                {
+                  "type": "project",
+                  "url": "https://sites.google.com/view/learningcodesimilarities/home?authuser=0"
+                },
+                {
+                  "type": "code",
+                  "url": "https://github.com/micheletufano/AutoenCODE"
+                },
+                {
+                  "type": "presentation",
+                  "url": "presentations/DeepLearning-Similarities.pdf"
+                }
+              ],
+              "link": "publications/C9.pdf",
+              "title": "Deep Learning Similarities from Different Representations of Source Code",
+              "authors": "M. Tufano, C. Watson, G. Bavota, M. Di Penta, M. White, D. Poshyvanyk",
+              "venue": "Proceedings of the 15th IEEE/ACM International Conference on Mining Software Repositories (<a href=\"https://2018.msrconf.org/home\" target=\"_blank\">MSR 2018</a>) - Gothenburg, Sweden, 2018, 12 pages, to appear. Acceptance Rate: 33%",
+              "year": "2018"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "publications/C8.pdf"
+                },
+                {
+                  "type": "award",
+                  "url": "https://conf.researchr.org/track/icpc-2018/icpc-2018-Early-Research-Achievement"
+                }
+              ],
+              "link": "publications/C8.pdf",
+              "title": "Towards Just-In-Time Refactoring Recommenders",
+              "authors": "J. Pantiuchina, G. Bavota, M. Tufano, D. Poshyvanyk",
+              "venue": "Proceedings of the 26th IEEE/ACM International Conference on Program Comprehension (<a href=\"https://conf.researchr.org/home/icpc-2018\" target=\"_blank\">ICPC 2018</a>), Early Research Achievement Track - Gothenburg, Sweden, 2018, 4 pages, to appear. Acceptance Rate: 47.8% Best ERA Paper Award",
+              "year": "2018"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "publications/C7.pdf"
+                },
+                {
+                  "type": "project",
+                  "url": "http://android-mutation.com/fse-appendix"
+                },
+                {
+                  "type": "video",
+                  "url": "https://youtu.be/Z21qnSUd33M"
+                }
+              ],
+              "link": "publications/C7.pdf",
+              "title": "MDroid+: A Mutation Testing Framework for Android",
+              "authors": "K. Moran, M. Tufano, C. Bernal-Cardenas, M. Linares-Vasquez, G. Bavota, C. Vendome, M. Di Penta, D. Poshyvanyk",
+              "venue": "Proceedings of the 40th IEEE/ACM International Conference on Software Engineering (<a href=\"https://www.icse2018.org/\" target=\"_blank\">ICSE 2018</a>), Formal Research Demonstrations Track - Gothenburg, Sweden, 2018, 4 pages, to appear. Acceptance Rate: 35%",
+              "year": "2018"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "publications/C6.pdf"
+                },
+                {
+                  "type": "project",
+                  "url": "http://android-mutation.com/fse-appendix"
+                }
+              ],
+              "link": "publications/C6.pdf",
+              "title": "Enabling Mutation Testing for Android Apps",
+              "authors": "M. Linares-Vasquez, G. Bavota, M. Tufano, K. Moran, M. Di Penta, C. Vendome, C. Bernal-Cardenas, D. Poshyvanyk",
+              "venue": "In Proceedings of 11th Joint Meeting of the European Software Engineering Conference and the 22nd ACM SIGSOFT Symposium on the Foundations of Software Engineering (<a href=\"http://esec-fse17.uni-paderborn.de/\" target=\"_blank\">ESEC/FSE 2017</a>) - Paderborn, Germany, 2017, 12 pages, to appear. Acceptance Rate: 72/295 (24%)",
+              "year": "2017"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "publications/C5.pdf"
+                },
+                {
+                  "type": "project",
+                  "url": "https://sites.google.com/site/deeplearningclone/home"
+                },
+                {
+                  "type": "presentation",
+                  "url": "http://slides.com/martingwhite/clones#/"
+                }
+              ],
+              "link": "publications/C5.pdf",
+              "title": "Deep Learning Code Fragments for Code Clone Detection",
+              "authors": "M. White, M. Tufano, C. Vendome, and D. Poshyvanyk",
+              "venue": "In Proceedings of the International Conference on Automated Software Engineering (<a href=\"http://www.ase2016.org/\" target=\"_blank\">ASE 2016</a>) - Singapore, Singapore, 2016, 12 pages, To appear. Acceptance Rate: 19%",
+              "year": "2016"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "publications/C4.pdf"
+                },
+                {
+                  "type": "project",
+                  "url": "https://sites.google.com/site/testsmells/"
+                }
+              ],
+              "link": "publications/C4.pdf",
+              "title": "An Empirical Investigation into the Nature of Test Smells",
+              "authors": "M. Tufano, F. Palomba, G. Bavota, R. Oliveto, M. Di Penta, A. De Lucia, and D. Poshyvanyk",
+              "venue": "In Proceedings of the International Conference on Automated Software Engineering (<a href=\"http://www.ase2016.org/\" target=\"_blank\">ASE 2016</a>) - Singapore, Singapore, 2016, 12 pages, To appear. Acceptance Rate: 19%",
+              "year": "2016"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "publications/C3.pdf"
+                },
+                {
+                  "type": "project",
+                  "url": "http://www.sesa.unisa.it/landfill/"
+                },
+                {
+                  "type": "video",
+                  "url": "http://www.sesa.unisa.it/tools/landfill.jsp"
+                }
+              ],
+              "link": "publications/C3.pdf",
+              "title": "Landfill: an Open Dataset of Code Smells with Public Evaluation",
+              "authors": "F. Palomba, D. Di Nucci, M. Tufano, G. Bavota, R. Oliveto, D. Poshyvanyk, A. De Lucia",
+              "venue": "In Proceedings of the 12th IEEE/ACM Working Conference on Mining Software Repositories (<a href=\"http://2015.msrconf.org/\">MSR 2015</a>) - Florence, Italy, 2015, 4 pages, To appear",
+              "year": "2015"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "publications/C2.pdf"
+                },
+                {
+                  "type": "project",
+                  "url": "http://www.inf.unibz.it/~gbavota/reports/smell-introduction/"
+                },
+                {
+                  "type": "award",
+                  "url": "http://2015.icse-conferences.org/component/content/article?id=90"
+                }
+              ],
+              "link": "publications/C2.pdf",
+              "title": "When and Why Your Code Starts to Smell Bad",
+              "authors": "M. Tufano, F. Palomba, G. Bavota, R. Oliveto, M. Di Penta, A. De Lucia, and D. Poshyvanyk",
+              "venue": "In Proceedings of the 37th International Conference on Software Engineering (<a href=\"http://2015.icse-conferences.org/\">ICSE 2015</a>), Florence, Italy, 2015, 12 pages, To appear. Acceptance Rate: 84/452 (18%) ACM/SIGSOFT Distinguished Paper Award",
+              "year": "2015"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "publications/C1.pdf"
+                },
+                {
+                  "type": "project",
+                  "url": "http://www.sesa.unisa.it/tools/aries.jsp"
+                },
+                {
+                  "type": "code",
+                  "url": "http://www.sesa.unisa.it/tools/plugins.zip"
+                }
+              ],
+              "link": "publications/C1.pdf",
+              "title": "Extract Package Refactoring in ARIES",
+              "authors": "F. Palomba, M. Tufano, G. Bavota, R. Oliveto, A. Marcus, D. Poshyvanyk, and A. De Lucia",
+              "venue": "In Proceedings of the 37th International Conference on Software Engineering (<a href=\"http://2015.icse-conferences.org/\">ICSE 2015</a>) - Demonstrations Track, Florence, Italy, 2015, 4 pages, To appear. Acceptance Rate: 25/42 (59%)",
+              "year": "2015"
+            },
+            {
+              "links": [
+                {
+                  "type": "paper",
+                  "url": "publications/W1.pdf"
+                },
+                {
+                  "type": "code",
+                  "url": "http://www.sesa.unisa.it/tools/plugins.zip"
+                }
+              ],
+              "link": "publications/W1.pdf",
+              "title": "ARIES: An Eclipse plug-in to Support Extract Class Refactoring",
+              "authors": "G. Bavota, A. De Lucia, A. Marcus, R. Oliveto, F. Palomba, and M. Tufano",
+              "venue": "In Proceedings of 8th Italian Workshop on Eclipse Technologies (<a href=\"http://2013.eclipse-it.org/\">Eclipse-it</a>), Crema, Italy, 2013. LCNS Press",
+              "year": "2013"
+            }
+        ];
+
+        const experiences = [
+            {
+                role: "Sr. Software Engineer",
+                company: "Google",
+                team: "DevAI Research Team",
+                period: "2024 - Current",
+                description: "Researching and developing Agentic Software Engineering solutions for automated bug-fixing, leveraging and evaluating Large Language Models (LLMs) to enhance developer workflows.",
+                logoUrl: "https://avatars.githubusercontent.com/u/1342004?v=4",
+                iconName: "cpu",
+                iconClass: "w-6 h-6 text-blue-500"
+            },
+            {
+                role: "Sr. Research Scientist",
+                company: "Microsoft",
+                team: "Visual Studio",
+                period: "2019 - 2024",
+                description: "Focused on training Transformer models to automate various developer tasks, advancing deep learning applications in software engineering.",
+                logoUrl: "https://avatars.githubusercontent.com/u/6154722?v=4",
+                iconName: "terminal",
+                iconClass: "w-6 h-6 text-slate-500"
+            },
+            {
+                role: "Ph.D. in Computer Science",
+                company: "The College of William and Mary",
+                team: "Advised by Dr. Denys Poshyvanyk",
+                period: "Graduated May 2019",
+                description: "Dissertation: Learning Code Transformations via Neural Machine Translation.",
+                logoUrl: "https://www.wm.edu/brand/_images/visual-brand/logos-wm-monogram.jpg",
+                iconName: "graduation-cap",
+                iconClass: "w-6 h-6 text-slate-500"
+            }
+        ];
+
+        const professionalService = [
+            {
+                title: "Organization Committee & Co-Chair",
+                years: "2025",
+                venues: [
+                    "<a href='https://conf.researchr.org/committee/forge-2025/forge-2025-organization-committee' class='text-slate-600 underline hover:text-blue-600'>FORGE 2025 (ICSE Workshop) - Industry Track Co-Chair</a>"
+                ]
+            },
+            {
+                title: "Program Committee Member",
+                years: "2020 - 2026",
+                venues: [
+                    "<a href='https://conf.researchr.org/committee/fse-2026/fse-2026-research-papers-program-committee' class='text-slate-600 underline hover:text-blue-600'>FSE 2026 (Research Papers)</a>",
+                    "<a href='https://conf.researchr.org/committee/fse-2025/fse-2025-papers-program-committee' class='text-slate-600 underline hover:text-blue-600'>FSE 2025 (Research Papers)</a>, <a href='https://conf.researchr.org/committee/fse-2025/fse-2025-demonstrations-program-committee' class='text-slate-600 underline hover:text-blue-600'>Demonstrations</a>",
+                    "<a href='https://conf.researchr.org/committee/ease-2026/prompt-se-2026-papers-program-committee' class='text-slate-600 underline hover:text-blue-600'>PROMPT-SE 2026 (EASE Workshop)</a>",
+                    "<a href='https://conf.researchr.org/committee/icpc-2025/icpc-2025-research-program-committee' class='text-slate-600 underline hover:text-blue-600'>ICPC 2025 (Research Track)</a>",
+                    "<a href='https://conf.researchr.org/committee/icst-2025/icst-2025-nier-program-committee' class='text-slate-600 underline hover:text-blue-600'>ICST 2025 (Short Papers, Vision and Emerging Results)</a>",
+                    "<a href='https://conf.researchr.org/committee/saner-2025/saner-2025-papers-program-committee' class='text-slate-600 underline hover:text-blue-600'>SANER 2025 (Research Papers)</a>",
+                    "<a href='https://conf.researchr.org/committee/icse-2025/gi-2025-papers-program-committee' class='text-slate-600 underline hover:text-blue-600'>Genetic Improvement Workshop (GI @ ICSE 2025)</a>",
+                    "<a href='https://conf.researchr.org/committee/ase-2024/ase-2024-papers-program-committee' class='text-slate-600 underline hover:text-blue-600'>ASE 2024 (Research Papers)</a>, <a href='https://conf.researchr.org/committee/ase-2024/ase-2024-journal-first-papers-program-committee' class='text-slate-600 underline hover:text-blue-600'>Journal-first</a>, <a href='https://conf.researchr.org/committee/ase-2024/ase-2024-nier-track-program-committee' class='text-slate-600 underline hover:text-blue-600'>NIER</a>",
+                    "<a href='https://2024.esec-fse.org/committee/fse-2024-industry-program-committee' class='text-slate-600 underline hover:text-blue-600'>ESEC/FSE 2024 (Industry Papers)</a>",
+                    "<a href='https://conf.researchr.org/committee/icpc-2024/icpc-2024-research-program-committee' class='text-slate-600 underline hover:text-blue-600'>ICPC 2024 (Research)</a>, <a href='https://conf.researchr.org/committee/icpc-2024/icpc-2024-tool-demonstration-program-committee' class='text-slate-600 underline hover:text-blue-600'>Tool Demonstration</a>",
+                    "<a href='https://2024.msrconf.org/committee/msr-2024-data-and-tool-showcase-track-data-and-tool-showcase-track---program-committee' class='text-slate-600 underline hover:text-blue-600'>MSR 2024 (Data and Tool Showcase)</a>",
+                    "<a href='https://conf.researchr.org/committee/saner-2024/saner-2024-papers-program-committee' class='text-slate-600 underline hover:text-blue-600'>SANER 2024 (Research Papers)</a>",
+                    "<a href='https://2024.aiwareconf.org/committee/aiware-2024-papers-program-committee' class='text-slate-600 underline hover:text-blue-600'>AIware 2024</a>",
+                    "<a href='https://2023.esec-fse.org/committee/fse-2023-demonstrations-program-committee' class='text-slate-600 underline hover:text-blue-600'>ESEC/FSE 2023 (Demonstrations)</a>",
+                    "<a href='https://conf.researchr.org/committee/icsme-2023/icsme-2023-papers-program-committee' class='text-slate-600 underline hover:text-blue-600'>ICSME 2023 (Research Track)</a>, <a href='https://conf.researchr.org/committee/icsme-2023/icsme-2023-new-ideas-and-emerging-results-track-new-ideas-and-emerging-results-track---program-committee' class='text-slate-600 underline hover:text-blue-600'>NIER</a>",
+                    "<a href='https://2023.issta.org/committee/issta-2023-tool-demonstrations-committee' class='text-slate-600 underline hover:text-blue-600'>ISSTA 2023 (Tool Demonstrations)</a>",
+                    "<a href='https://conf.researchr.org/committee/icse-2023/icse-2023-technical-track-programme-committee' class='text-slate-600 underline hover:text-blue-600'>ICSE 2023 (Technical Track)</a>",
+                    "<a href='https://conf.researchr.org/committee/icpc-2023/icpc-2023-tool-demonstration-program-committee' class='text-slate-600 underline hover:text-blue-600'>ICPC 2023 (Tool Demonstration)</a>",
+                    "<a href='https://conf.researchr.org/committee/ase-2022/ase-2022-nier-track-program-committee' class='text-slate-600 underline hover:text-blue-600'>ASE 2022 (NIER)</a>",
+                    "<a href='https://conf.researchr.org/committee/issta-2022/issta-2022-tool-demonstrations-program-committee' class='text-slate-600 underline hover:text-blue-600'>ISSTA 2022 (Tool Demonstrations)</a>",
+                    "<a href='https://pldi22.sigplan.org/committee/asa-2022-papers-program-committee' class='text-slate-600 underline hover:text-blue-600'>ASA 2022 (PLDI Workshop)</a>",
+                    "<a href='https://conf.researchr.org/committee/icpc-2022/icpc-2022-tool-demonstration-program-committee' class='text-slate-600 underline hover:text-blue-600'>ICPC 2022 (Tool Demonstration)</a>, <a href='https://conf.researchr.org/committee/icpc-2022/icpc-2022-era-program-committee' class='text-slate-600 underline hover:text-blue-600'>ERA</a>",
+                    "<a href='https://icst2022.vrain.upv.es/committee/icst-2022-Workshops-program-committee' class='text-slate-600 underline hover:text-blue-600'>ICST 2022 (Workshops)</a>",
+                    "<a href='https://conf.researchr.org/committee/ase-2021/ase-2021-papers-program-committee' class='text-slate-600 underline hover:text-blue-600'>ASE 2021 (Research Papers)</a>",
+                    "<a href='https://conf.researchr.org/committee/icpc-2021/icpc-2021-era-program-committee' class='text-slate-600 underline hover:text-blue-600'>ICPC 2021 (ERA)</a>",
+                    "<a href='https://2021.msrconf.org/committee/msr-2021-mining-challenge-miltiadis-allamanis' class='text-slate-600 underline hover:text-blue-600'>MSR 2021 (Mining Challenge)</a>",
+                    "<a href='https://2020.esec-fse.org/committee/esecfse-2020-artifacts-program-committee' class='text-slate-600 underline hover:text-blue-600'>ESEC/FSE 2020 (Artifacts)</a>",
+                    "<a href='https://conf.researchr.org/committee/ase-2020/ase-2020-tool-demonstrations-program-committee' class='text-slate-600 underline hover:text-blue-600'>ASE 2020 (Tool Demonstrations)</a>",
+                    "<a href='https://conf.researchr.org/committee/issta-2020/issta-2020-tool-demonstration-program-committee' class='text-slate-600 underline hover:text-blue-600'>ISSTA 2020 (Tool Demonstration)</a>",
+                    "<a href='https://2020.programming-conference.org/committee/eniac-2020-papers-program-committee' class='text-slate-600 underline hover:text-blue-600'>ENIAC 2020</a>"
+                ]
+            },
+            {
+                title: "Session Chair",
+                years: "2025",
+                venues: [
+                    "<a href='https://conf.researchr.org/track/forge-2025/forge-2025-papers' class='text-slate-600 underline hover:text-blue-600'>FORGE 2025 (ICSE Workshop) - Keynote Session</a>"
+                ]
+            }
+        ];
+
+        const invitedTalks = [
+            { title: "Scaling Agentic Program Repair at Google", venue: "<a href='https://sesalabunisa.github.io/ISSSE-2026/#program' class='text-slate-500 hover:text-blue-600' target='_blank'>ISSSE 2026 - The 18th International Summer School on Software Engineering</a>", year: "2026" },
+            { title: "InferFix: End-to-End Program Repair with LLMs", venue: "<a href='https://www.ucl.ac.uk/crest/events/2023/sep/65th-crest-open-workshop-automated-program-repair-and-genetic-improvement#:~:text=Our%20work%20on%20automatic%20software,an%20academic%2C%20and%20an%20educator.' class='text-slate-500 hover:text-blue-600' target='_blank'>The 65th CREST Open Workshop</a>", year: "2023" },
+            { title: "AI for SE", venue: "<a href='https://siesta.si.usi.ch/2023/schedule#:~:text=In%20this%20talk%2C%20we%20will,(RLHF)%20for%20SE%20tasks.' class='text-slate-500 hover:text-blue-600' target='_blank'>SIESTA 2023 (3rd International Software Engineering Summer School)</a>", year: "2023" }
+        ];
+
+        // ----------------------------------------------------
+        // RENDERING LOGIC
+        // ----------------------------------------------------
+
+        // Render News
+        document.getElementById('news-container').innerHTML = newsItems.map((item, index) => `
+            <div class="flex gap-4 group">
+                <div class="flex flex-col items-center mt-1">
+                    <div class="w-2.5 h-2.5 rounded-full ${index === 0 ? 'bg-blue-500 ring-4 ring-blue-100' : 'bg-slate-300'}"></div>
+                    ${index !== newsItems.length - 1 ? '<div class="w-px h-full bg-slate-200 my-1"></div>' : ''}
+                </div>
+                <div class="pb-1">
+                    <span class="text-xs font-bold text-blue-600 tracking-wider uppercase mb-1 block">${item.date}</span>
+                    <p class="text-sm text-slate-700 leading-relaxed">${item.content}</p>
+                </div>
+            </div>
+        `).join('');
+
+        // Render Experiences
+        document.getElementById('experience-container').innerHTML = experiences.map(exp => `
+            <div class="relative flex items-center w-full group md:odd:flex-row-reverse">
+                <div class="absolute left-0 md:left-1/2 top-1/2 -translate-y-1/2 md:-translate-x-1/2 flex items-center justify-center w-14 h-14 rounded-full border-4 border-slate-50 bg-white shadow-sm z-10 overflow-hidden">
+                    ${exp.logoUrl 
+                        ? `<img src="${exp.logoUrl}" alt="${exp.company} logo" class="w-8 h-8 object-contain" />` 
+                        : `<i data-lucide="${exp.iconName}" class="${exp.iconClass}"></i>`
+                    }
+                </div>
+                <div class="w-full ml-20 md:ml-0 md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-sm border border-slate-100 group-hover:shadow-md transition-shadow">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-2">
+                        <h3 class="font-bold text-slate-900 text-lg">${exp.role}</h3>
+                        <span class="inline-flex px-2.5 py-1 rounded-md bg-slate-100 text-slate-600 text-xs font-medium shrink-0">${exp.period}</span>
+                    </div>
+                    <div class="text-blue-600 font-medium text-sm mb-3">${exp.company} <span class="text-slate-400 font-normal ml-1">(${exp.team})</span></div>
+                    <p class="text-slate-600 text-sm leading-relaxed">${exp.description}</p>
+                </div>
+            </div>
+        `).join('');
+
+        // Render Service
+        document.getElementById('service-container').innerHTML = professionalService.map(item => `
+            <div>
+                <h4 class="font-semibold text-slate-900 mb-2">${item.title}</h4>
+                <ul class="space-y-2">
+                    ${item.venues.map(venue => `
+                        <li class="flex items-start gap-2 text-slate-600 text-sm">
+                            <span class="text-blue-400 mt-0.5 mr-2">•</span>${venue}
+                        </li>
+                    `).join('')}
+                </ul>
+            </div>
+        `).join('');
+
+        // Render Talks
+        document.getElementById('talks-container').innerHTML = invitedTalks.map(talk => `
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 hover:border-blue-200 transition-colors mr-1">
+                <h4 class="font-semibold text-slate-900 mb-1 leading-tight text-sm">${talk.title}</h4>
+                <div class="flex justify-between items-center mt-2">
+                    <span class="text-slate-500 text-xs">${talk.venue}</span>
+                    <span class="inline-flex px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-medium text-xs">${talk.year}</span>
+                </div>
+            </div>
+        `).join('');
+
+        // Render Publications
+        const pubContainer = document.getElementById('publications-container');
+        const groupedPapers = publications.reduce((acc, p) => {
+            if (!acc[p.year]) acc[p.year] = [];
+            acc[p.year].push(p);
+            return acc;
+        }, {});
+
+        pubContainer.innerHTML = Object.keys(groupedPapers).sort((a, b) => b - a).map(year => `
+            <div>
+                <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-4">
+                    <span class="bg-slate-100 px-3 py-1 rounded-md text-slate-600 text-sm">${year}</span>
+                    <div class="h-px bg-slate-200 flex-1"></div>
+                </h3>
+                <div class="grid gap-4">
+                    ${groupedPapers[year].map(paper => {
+                        const detailsLink = paper.links ? paper.links.find(l => l.type === 'details') : null;
+                        const otherLinks = paper.links ? paper.links.filter(l => l.type !== 'details') : [];
+                        return `
+                            <div class="group bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all flex flex-col gap-3">
+                                <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                                    <h4 class="text-base font-semibold text-slate-900 group-hover:text-blue-700 transition-colors leading-snug flex-1">${paper.title}</h4>
+                                    <div class="flex flex-wrap items-center gap-2 shrink-0 md:justify-end mt-1 md:mt-0">
+                                        ${otherLinks.map(link => {
+                                            const config = {
+                                                paper: { icon: "file-text", label: "Paper" },
+                                                project: { icon: "globe", label: "Project" },
+                                                code: { icon: "code", label: "Code" },
+                                                presentation: { icon: "monitor", label: "Slides" },
+                                                video: { icon: "video", label: "Video" },
+                                                award: { icon: "trophy", label: "Award" }
+                                            };
+                                            const item = config[link.type] || { icon: "external-link", label: "Link" };
+                                            const label = link.label || item.label;
+                                            return `
+                                                <a href="${link.url}" target="_blank" class="inline-flex items-center px-3 py-1.5 rounded-lg text-sm font-medium transition-colors bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white">
+                                                    <i data-lucide="${item.icon}" class="w-3.5 h-3.5 mr-1.5"></i> ${label}
+                                                </a>
+                                            `;
+                                        }).join('')}
+                                    </div>
+                                </div>
+                                <div class="space-y-1.5">
+                                    ${paper.authors ? `<p class="text-sm text-slate-600">${paper.authors.replace(/M\. Tufano/g, '<span class="font-semibold text-slate-800">M. Tufano</span>').replace(/Michele Tufano/g, '<span class="font-semibold text-slate-800">Michele Tufano</span>')}</p>` : ''}
+                                    ${paper.venue ? `<p class="text-sm text-slate-500 italic">${detailsLink ? `<a href="${detailsLink.url}" target="_blank" class="text-slate-500 hover:text-blue-600">${paper.venue}</a>` : paper.venue}</p>` : ''}
+                                    <div class="flex items-center flex-wrap gap-x-3 gap-y-1 mt-2">
+                                        ${paper.id ? `<span class="text-xs font-mono text-slate-500 bg-slate-100 px-2 py-0.5 rounded">arXiv:${paper.id}</span>` : ''}
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            </div>
+        `).join('');
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // ----------------------------------------------------
+        // INITIALIZATION CHECK FOR SHORT LISTS
+        // Hide the expand button and fade if content doesn't naturally overflow
+        // ----------------------------------------------------
+        setTimeout(() => {
+            ['news', 'talks', 'service'].forEach(id => {
+                const wrapper = document.getElementById(id + '-scroll-wrapper');
+                const fade = document.getElementById(id + '-fade');
+                const btn = document.getElementById(id + '-expand-btn');
+                
+                if (wrapper && wrapper.scrollHeight <= wrapper.clientHeight) {
+                    if (btn) btn.style.display = 'none';
+                    if (fade) fade.style.display = 'none';
+                }
+            });
+        }, 150); // slight delay ensures DOM has properly painted the sizes
+    </script>
+</body>
+</html>
